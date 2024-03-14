@@ -2,6 +2,7 @@ import {Command} from "commander"
 import * as puppeteer from "puppeteer"
 import fs from "fs-extra"
 import path from "path"
+import {execSync} from 'child_process'
 
 import delay from "@/utils/delay"
 
@@ -171,6 +172,9 @@ async function main(url: string){
     })
     
     await browser.close()
+
+    execSync(`__python.bat create-pdf.py ${url}`)
+
 }
 
 const program = new Command()

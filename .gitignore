@@ -1,4 +1,6 @@
 captures
 captures/*
+pdfs
+pdfs/*
 node_modules
 node_modules/*
